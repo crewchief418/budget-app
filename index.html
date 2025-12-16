@@ -2,15 +2,42 @@
 <html>
 <head>
 	<title>Moran Budget App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="icon" type="image/png" href="icon.png">
 	<link rel="apple-touch-icon" href="icon.png">
 
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="theme-color" content="ffffff">
-
-	<meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbwX83qOeXivnfCVe8se7liL6TxOlcnDw6Mq-cF7k3EllvrugJt_9xY4aKP4UF40lsdU/exec" />
+	<style>
+		body { font-family: sans-serif; text-align: center; padding-top: 40px; background-color: #f4f4f4; }
+		.loader { margin-bottom: 20px; font-size: 18px; color: #555; }
+		.btn {
+			display: inline-block; padding: 15px 30px;
+			background-color: #007bff; color: white;
+			text-decoration: none; border-radius: 8px; font-weight: bold;
+		}
+	</style>
 </head>
-<body>	
-	<p>Loading Budget App...</p>
+<body>
+
+	<div class="loader">
+		<img src="icon.png" style="width: 64px; height: 64px; border-radius: 12px; margine-bottom: 10px;"></br>
+		Launching Budget App...
+	</div>
+
+	<a id="sheetLink" class="btn" href="#">Click here if not redirected</a>
+
+	<script>
+		// PASTE YOUR GOOGLE SHEET LINK INSIDE THE QUOTES BELOW
+		var destination = "https://script.google.com/macros/s/AKfycbwX83qOeXivnfCVe8se7liL6TxOlcnDw6Mq-cF7k3EllvrugJt_9xY4aKP4UF40lsdU/exec";
+
+		document.getElementById("sheetLink").href = destination;
+
+		// This waits 2.5 seconds before moving to the sheet
+		// This gives Chrome time to recognize the icon
+		setTimeout(function(){
+			window.location.href = destination;
+		}, 2500);
+	</script>
 </body>
 </html>
