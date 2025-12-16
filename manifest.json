@@ -9,7 +9,8 @@
       "purpose": "any maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://crewchief418.github.io/budget-app/index.html",
+"scope": "https://crewchief418.github.io/budget-app",
   "display": "standalone",
   "background-color": "#ffffff",
   "theme-color": "#ffffff"
